@@ -46,14 +46,14 @@ function retract(toRetract)
 				toRetract.style.top = "35vh";
 				toRetract.style.left = "35vw";
 				toRetract.classList.remove("retractToCenter");
-				toRetract.style.zIndex = 0;
+				toRetract.style.zIndex = -1;
 			}
 			else
 			{
 				toRetract.style.width = "50vw";
 				toRetract.style.height = "50vh";
 				toRetract.classList.remove("retractToQuarter");
-				toRetract.style.zIndex = -1;
+				toRetract.style.zIndex = -2;
 			}
 			toRetract.onclick = function() {expand(toRetract)};
 			toRetract.removeEventListener("animationend", retractHandler);
