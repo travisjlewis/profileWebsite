@@ -1,0 +1,46 @@
+video#backgroundVideo{
+	position: fixed; right: 0; bottom: 0;
+	min-width: 100%; min-height: 100);
+	width: auto; height: auto; z-index: -100;
+}
+
+body{
+	margin:0;
+}
+
+div{
+	position:absolute;
+	padding: 0.5%;
+}
+
+.quadrant {
+	z-index: -1;
+}
+
+.expandToFull {
+	animation-name: expandToFull;
+	animation-duration: 1s;	
+	animation-timing-function: ease-in-out;		
+	visibility: visible !important;	
+}
+
+@keyframes expandToFull{
+	to{
+		width: 100vw;
+		height: 100vh;
+	}
+}
+
+.retractToQuarter {
+	animation-name: retractToQuarter;
+	animation-duration: 1s;	
+	animation-timing-function: ease-in-out;		
+	visibility: visible !important;	
+}
+
+@keyframes retractToQuarter{
+	to{
+		width: 50vw;
+		height: 50vh;
+	}
+}
