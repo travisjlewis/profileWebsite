@@ -5,16 +5,60 @@ video#backgroundVideo{
 }
 
 body{
-	margin:0;
+	margin: 0.5%;
 }
 
 div{
 	position:absolute;
-	padding: 0.5%;
+}
+
+div img{
+	position: absolute;
+	height: 30%;
+	width: 30%;
+	top: 35%;
+	left: 35%;
+}
+
+.center {
+	z-index: 0;
+	height: 30vh;
+	width: 30vw;
+	background-color: grey;
+	border: solid 3px black;
+	left: 35vw;
+	top: 35vh;
 }
 
 .quadrant {
 	z-index: -1;
+	height: 50vh;
+	width: 50vw;
+	border: solid 3px black;
+}
+
+.tl {
+	top:0%;
+	left:0%;
+	background-color: 2671BF;
+}
+
+.tr {
+	top:0%;
+	right:0%;
+	background-color: 194B7F;
+}
+
+.bl {
+	bottom:0%;
+	left:0%;
+	background-color: 3296FF;
+}
+
+.br {
+	bottom:0%;
+	right:0%;
+	background-color: 0D2640;
 }
 
 .expandToFull {
@@ -28,6 +72,8 @@ div{
 	to{
 		width: 100vw;
 		height: 100vh;
+		top: 0%;
+		left: 0%;
 	}
 }
 
@@ -42,5 +88,21 @@ div{
 	to{
 		width: 50vw;
 		height: 50vh;
+	}
+}
+
+.retractToCenter {
+	animation-name: retractToCenter;
+	animation-duration: 1s;	
+	animation-timing-function: ease-in-out;		
+	visibility: visible !important;
+}
+
+@keyframes retractToCenter{
+	to{
+		width: 30vw;
+		height: 30vh;
+		left: 35vw;
+		top: 35vh;
 	}
 }
